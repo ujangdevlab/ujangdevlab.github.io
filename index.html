@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="bg-grid"></div>
+  <div class="bg-grid" aria-hidden="true"></div>
 
   <header class="site-header">
     <nav class="nav container">
@@ -21,10 +21,11 @@
       <button id="themeToggle" class="ghost-btn" aria-label="Ubah Tema">🌙</button>
     </nav>
 
+    <!-- HERO -->
     <div class="hero container reveal">
       <p class="badge">🚀 Projek Kreatif & Eksperimen</p>
       <h1 class="gradient-text">Inovasi. Kreativitas. <span class="underline">Bisnis.</span></h1>
-      <p class="sub">Ujang DevLab — ruang eksplorasi digital di bidang teknologi, musik, dan otomotif.</p>
+      <p class="sub">Ujang DevLab — ruang eksplorasi digital di teknologi, musik, dan otomotif.</p>
       <div class="actions">
         <a id="ctaBtn" class="primary-btn">Mulai Jelajah</a>
         <a class="secondary-btn" href="#feature">Lihat Fitur</a>
@@ -33,38 +34,68 @@
   </header>
 
   <main>
+    <!-- FITUR -->
     <section id="feature" class="container grid cards">
       <article class="card reveal">
         <h3>Prompt & AI Tools</h3>
-        <p>Template siap pakai untuk Gemini, Veo, dan Suno. Efisiensi kerja kreatif tanpa batas.</p>
+        <p>Template untuk Gemini/Veo/Suno yang mempercepat workflow.</p>
       </article>
       <article class="card reveal">
         <h3>Desain & Branding</h3>
-        <p>Logo, banner, dan identitas visual bergaya elegan — siap pakai untuk sosial media dan web.</p>
+        <p>Logo, banner, dan identitas visual elegan siap publish.</p>
       </article>
       <article class="card reveal">
         <h3>Web Project</h3>
-        <p>Landing page cepat, responsif, dan mudah dikelola — dibangun di GitHub Pages.</p>
+        <p>Landing page ringan & responsif via GitHub Pages.</p>
       </article>
     </section>
 
+    <!-- CALLOUT -->
     <section class="container callout reveal">
       <h2>Siap Kolaborasi?</h2>
       <p>Klik tombol di bawah untuk ucap salam 🙌</p>
       <button class="primary-btn" id="helloBtn">Sapa Ujang</button>
     </section>
+
+    <!-- KONTAK -->
+    <section id="contact" class="container contact reveal">
+      <h2>Kontak</h2>
+      <p class="sub">Butuh bantuan atau ingin kolaborasi? Chat langsung via WhatsApp.</p>
+
+      <div class="cta-row">
+        <a
+          class="primary-btn wa-btn"
+          href="https://wa.me/6282310078067?text=Halo%20Ujang%20DevLab,%20saya%20tertarik%20kolaborasi%20🚀"
+          target="_blank" rel="noopener"
+        >💬 WhatsApp Saya</a>
+
+        <a class="secondary-btn"
+          href="mailto:ujangdevlab@example.com?subject=Kolaborasi%20Ujang%20DevLab&body=Halo%20Ujang,%20saya%20ingin%20…">
+          ✉️ Email
+        </a>
+      </div>
+      <small class="hint">Format nomor WA: 62 + nomor tanpa 0 (contoh: 62823…)</small>
+    </section>
   </main>
 
   <footer class="site-footer">
-    <p>© <span id="year"></span> Ujang DevLab. Dibangun dengan ❤ menggunakan GitHub Pages.</p>
+    <p>© <span id="year"></span> Ujang DevLab. Dibangun dengan ❤ di GitHub Pages.</p>
   </footer>
 
- <!-- Tombol WhatsApp mengambang -->
-<a href="https://wa.me/6282310078067?text=Halo%20Ujang%20DevLab%20👋"
+  <!-- TOMBOL WA MENGAMBANG (pakai ikon asli) -->
+  <a class="wa-float" href="https://wa.me/6282310078067?text=Halo%20Ujang%20DevLab%20👋"
+     target="_blank" rel="noopener" aria-label="Chat WhatsApp">
+    <img src="images/whatsapp.png" alt="WhatsApp" class="wa-icon">
+  </a>
+
+  <!-- Tombol WhatsApp mengambang -->
+<a class="wa-float"
+   href="https://wa.me/6282310078067?text=Halo%20Ujang%20DevLab%20👋"
    target="_blank" rel="noopener"
-   class="wa-float">
-   <img src="images/whatsapp.svg" alt="Chat WhatsApp" class="wa-icon">
+   aria-label="Chat WhatsApp">
+  <img src="images/WhatsApp.svg" alt="WhatsApp" class="wa-icon">
 </a>
 
+  <script src="script.js"></script>
 </body>
 </html>
