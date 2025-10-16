@@ -4,66 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ujang DevLab — Inovasi, Kreativitas, & Bisnis</title>
-  <meta name="description" content="Ujang DevLab: ruang eksplorasi digital di teknologi, musik, dan otomotif. Desain, AI workflow, dan web ringan untuk kreator & UMKM.">
-
-  <!-- BASIC SEO -->
-  <meta name="title" content="Ujang DevLab — Inovasi, Kreativitas, & Bisnis">
-  <link rel="canonical" href="https://ujangdevlab.github.io/">
-
-  <!-- OPEN GRAPH -->
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Ujang DevLab">
-  <meta property="og:title" content="Ujang DevLab — Inovasi, Kreativitas, & Bisnis">
-  <meta property="og:description" content="Desain, AI workflow (Gemini/Veo/Suno), dan web ringan untuk kreator & UMKM.">
-  <meta property="og:url" content="https://ujangdevlab.github.io/">
-  <meta property="og:image" content="https://ujangdevlab.github.io/images/og/cover-index.jpg">
-  <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
-
-  <!-- TWITTER / X -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Ujang DevLab — Inovasi, Kreativitas, & Bisnis">
-  <meta name="twitter:description" content="Desain, AI workflow (Gemini/Veo/Suno), dan web ringan untuk kreator & UMKM.">
-  <meta name="twitter:image" content="https://ujangdevlab.github.io/images/og/cover-index.jpg">
-
-  <!-- ICONS -->
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/images/favicon-192.png">
-  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
-
-  <!-- FONTS -->
+  <meta name="description" content="Website resmi Ujang DevLab — inovasi, kreativitas, dan teknologi digital." />
+  <link rel="icon" type="image/png" href="images/logo.png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <!-- STYLES -->
   <link rel="stylesheet" href="style.css" />
-
-  <!-- STRUCTURED DATA: ORGANIZATION -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Organization",
-    "name":"Ujang DevLab",
-    "url":"https://ujangdevlab.github.io/",
-    "logo":"https://ujangdevlab.github.io/images/logo.png",
-    "sameAs":[
-      "https://www.instagram.com/ujanx.ayub",
-      "https://www.tiktok.com/@ujang.ayub",
-      "https://www.facebook.com/ujanx.ayub"
-    ],
-    "contactPoint":[{
-      "@type":"ContactPoint",
-      "contactType":"customer support",
-      "areaServed":"ID",
-      "availableLanguage":["id","en"],
-      "telephone":"+62-823-1007-8067"
-    }]
-  }
-  </script>
 </head>
 <body>
   <div class="bg-grid" aria-hidden="true"></div>
 
+  <!-- HEADER & NAV -->
   <header class="site-header">
     <nav class="nav container" aria-label="Primary">
       <a class="brand" href="index.html">
@@ -72,11 +21,12 @@
       </a>
 
       <button id="navToggle" class="nav-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Buka menu">
-        <span class="sr-only">Buka menu</span> ☰
+        <span class="sr-only">Buka menu</span>
+        ☰
       </button>
 
       <ul id="primary-navigation" class="nav-links" role="menubar">
-        <li role="none"><a role="menuitem" aria-current="page" href="index.html">Home</a></li>
+        <li role="none"><a role="menuitem" href="index.html">Home</a></li>
         <li role="none"><a role="menuitem" href="#feature">Fitur</a></li>
         <li role="none"><a role="menuitem" href="#contact">Kontak</a></li>
         <li role="none"><a role="menuitem" href="about.html">Tentang</a></li>
@@ -94,6 +44,7 @@
       <button id="themeToggle" class="ghost-btn" aria-label="Ubah Tema">🌙</button>
     </nav>
 
+    <!-- HERO -->
     <div class="hero container reveal">
       <p class="badge">🚀 Projek Kreatif & Eksperimen</p>
       <h1 class="gradient-text">Inovasi. Kreativitas. <span class="underline">Bisnis.</span></h1>
@@ -106,6 +57,7 @@
   </header>
 
   <main>
+    <!-- FITUR -->
     <section id="feature" class="container grid cards">
       <article class="card reveal">
         <h3>Prompt & AI Tools</h3>
@@ -121,18 +73,29 @@
       </article>
     </section>
 
+    <!-- CALLOUT -->
     <section class="container callout reveal">
       <h2>Siap Kolaborasi?</h2>
       <p>Klik tombol di bawah untuk ucap salam 🙌</p>
       <button class="primary-btn" id="helloBtn">Sapa Ujang</button>
     </section>
 
+    <!-- KONTAK -->
     <section id="contact" class="container contact reveal">
       <h2>Kontak</h2>
       <p class="sub">Butuh bantuan atau ingin kolaborasi? Chat langsung via WhatsApp.</p>
+
       <div class="cta-row">
-        <a class="primary-btn wa-btn" href="https://wa.me/6282310078067?text=Halo%20Ujang%20DevLab,%20saya%20tertarik%20kolaborasi%20🚀" target="_blank" rel="noopener">💬 WhatsApp Saya</a>
-        <a class="secondary-btn" href="mailto:ujanx.ayub@gmail.com?subject=Kolaborasi%20Ujang%20DevLab&body=Halo%20Ujang,%20saya%20ingin%20…">✉️ Email</a>
+        <a
+          class="primary-btn wa-btn"
+          href="https://wa.me/6282310078067?text=Halo%20Ujang%20DevLab,%20saya%20tertarik%20kolaborasi%20🚀"
+          target="_blank" rel="noopener"
+        >💬 WhatsApp Saya</a>
+
+        <a class="secondary-btn"
+          href="mailto:ujanx.ayub@gmail.com?subject=Kolaborasi%20Ujang%20DevLab&body=Halo%20Ujang,%20saya%20ingin%20…">
+          ✉️ Email
+        </a>
       </div>
       <small class="hint"></small>
     </section>
@@ -142,7 +105,11 @@
     <p>© <span id="year"></span> Ujang DevLab. Dibangun dengan ❤ di GitHub Pages.</p>
   </footer>
 
-  <a class="wa-float" href="https://wa.me/6282310078067?text=Halo%20Ujang%20DevLab%20👋" target="_blank" rel="noopener" aria-label="Chat WhatsApp">
+  <!-- WhatsApp Floating Button -->
+  <a class="wa-float"
+     href="https://wa.me/6282310078067?text=Halo%20Ujang%20DevLab%20👋"
+     target="_blank" rel="noopener"
+     aria-label="Chat WhatsApp">
     <img src="images/WhatsApp.svg" alt="WhatsApp" class="wa-icon">
   </a>
 
