@@ -4,15 +4,36 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Katalog — Ujang DevLab / Exterior Auto Solution</title>
-  <meta name="description" content="Katalog sparepart eksterior: headlamp, stoplamp, bemper, grille, spion, fender, diffuser, spoiler, dan lainnya." />
-  <link rel="icon" type="image/png" href="images/logo.png">
+  <meta name="description" content="Headlamp, stoplamp, bemper, grille, spion, fender, diffuser, spoiler. Pilih model & tahun, chat WA untuk cek stok.">
+
+  <!-- SEO -->
+  <meta name="title" content="Katalog Sparepart Eksterior — Original / OEM">
+  <link rel="canonical" href="https://ujangdevlab.github.io/katalog.html">
+
+  <!-- OG -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Katalog Sparepart Eksterior — Original / OEM">
+  <meta property="og:description" content="Filter berdasarkan kategori, kondisi, dan tahun. Klik untuk cek stok via WhatsApp.">
+  <meta property="og:url" content="https://ujangdevlab.github.io/katalog.html">
+  <meta property="og:image" content="https://ujangdevlab.github.io/images/og/cover-katalog.jpg">
+  <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+
+  <!-- TWITTER -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Katalog Sparepart Eksterior — Original / OEM">
+  <meta name="twitter:description" content="Filter berdasarkan kategori, kondisi, dan tahun. Klik untuk cek stok via WhatsApp.">
+  <meta name="twitter:image" content="https://ujangdevlab.github.io/images/og/cover-katalog.jpg">
+
+  <!-- ICONS & FONTS & STYLES -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/images/favicon-192.png">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="bg-grid" aria-hidden="true"></div>
 
-  <!-- HEADER & NAV -->
   <header class="site-header">
     <nav class="nav container" aria-label="Primary">
       <a class="brand" href="index.html">
@@ -21,8 +42,7 @@
       </a>
 
       <button id="navToggle" class="nav-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Buka menu">
-        <span class="sr-only">Buka menu</span>
-        ☰
+        <span class="sr-only">Buka menu</span> ☰
       </button>
 
       <ul id="primary-navigation" class="nav-links" role="menubar">
@@ -44,7 +64,6 @@
       <button id="themeToggle" class="ghost-btn" aria-label="Ubah Tema">🌙</button>
     </nav>
 
-    <!-- HERO / PAGE TITLE -->
     <div class="hero container reveal">
       <p class="badge">Katalog Produk</p>
       <h1 class="gradient-text">Sparepart Eksterior <span class="underline">Original</span></h1>
@@ -86,7 +105,7 @@
 
     <!-- GRID PRODUK -->
     <section class="container grid cards" id="gridProduk">
-      <!-- TEMPLATE KARTU: Duplikasi & edit sesuai stok nyata -->
+      <!-- Ganti gambar/harga/kode sesuai stok nyata -->
       <article class="card reveal" data-kategori="Headlamp" data-model="Toyota Yaris" data-tahun="2009-2013" data-kondisi="Bekas Orisinal">
         <img src="images/products/yaris-headlamp-09013.jpg" alt="Headlamp Toyota Yaris 2009-2013 Original Kanan" class="card-img" loading="lazy">
         <h3 class="card-title">Headlamp Toyota Yaris 2009-2013 (Kanan)</h3>
@@ -176,14 +195,12 @@
       </article>
     </section>
 
-    <!-- INFO -->
     <section class="container callout reveal">
       <h2>Tidak menemukan part yang kamu cari?</h2>
       <p>Kirim chat WA dengan format: <strong>Model • Part • Tahun • Kanan/Kiri • Foto Referensi (opsional)</strong>. Kami bantu cari stok tercepat.</p>
       <a class="primary-btn wa-btn" href="https://wa.me/6282310078067?text=Halo%20Ujang%2C%20saya%20mencari%20part%3A%20%5BModel%5D%20%7C%20%5BPart%5D%20%7C%20%5BTahun%5D%20%7C%20%5BKanan%2FKiri%5D" target="_blank" rel="noopener">Minta Bantuan via WA</a>
     </section>
 
-    <!-- KONTAK (ANCHOR UNTUK NAV) -->
     <section id="contact" class="container contact reveal">
       <h2>Kontak</h2>
       <p class="sub">Butuh bantuan atau ingin kolaborasi? Chat langsung via WhatsApp.</p>
@@ -198,57 +215,48 @@
     <p>© <span id="year"></span> Ujang DevLab. Dibangun dengan ❤ di GitHub Pages.</p>
   </footer>
 
-  <!-- WhatsApp Floating Button -->
   <a class="wa-float" href="https://wa.me/6282310078067?text=Halo%20Ujang%20DevLab%20👋" target="_blank" rel="noopener" aria-label="Chat WhatsApp">
     <img src="images/WhatsApp.svg" alt="WhatsApp" class="wa-icon">
   </a>
 
+  <!-- JSON-LD Product otomatis dari kartu katalog -->
   <script>
-    // ====== FILTER & SEARCH KATALOG (tanpa library) ======
-    const $ = (s,ctx=document)=>ctx.querySelector(s); const $$=(s,ctx=document)=>[...ctx.querySelectorAll(s)];
-    const q = $('#q');
-    const kategori = $('#kategori');
-    const kondisi = $('#kondisi');
-    const tahun = $('#tahun');
-    const cards = $$('#gridProduk .card');
-
-    function normal(s){ return (s||'').toLowerCase(); }
-
-    function match(card){
-      const qv = normal(q.value);
-      const kv = kategori.value;
-      const tv = tahun.value;
-      const cv = kondisi.value;
-
-      const text = normal(card.innerText);
-      const dk = card.dataset.kategori;
-      const dt = card.dataset.tahun;
-      const dc = card.dataset.kondisi;
-
-      const okQ = !qv || text.includes(qv);
-      const okK = !kv || dk === kv;
-      const okT = !tv || dt === tv;
-      const okC = !cv || dc === cv;
-      return okQ && okK && okT && okC;
-    }
-
-    function applyFilter(){
-      let visible = 0;
-      cards.forEach(c=>{
-        if(match(c)){
-          c.style.display='';
-          visible++;
-        } else {
-          c.style.display='none';
-        }
+    (function () {
+      const grid = document.getElementById('gridProduk');
+      if (!grid) return;
+      const products = [...grid.querySelectorAll('.card')].map(card => {
+        const name = card.querySelector('.card-title')?.textContent?.trim() || '';
+        const img = card.querySelector('img')?.getAttribute('src') || '';
+        const priceText = card.querySelector('.price')?.textContent?.replace(/[^
+\d]/g,'') || '';
+        const price = priceText || '0';
+        const sub = card.querySelector('.card-sub')?.textContent || '';
+        const skuMatch = sub.match(/Kode:\s*([A-Z0-9\-]+)/i);
+        const sku = skuMatch ? skuMatch[1] : name.replace(/\s+/g,'-').toUpperCase();
+        const brandMatch = name.match(/(Toyota|Honda|Wuling|Lexus|MG|Nissan)/i);
+        const brand = brandMatch ? brandMatch[1] : 'OEM';
+        const url = location.href;
+        return {
+          "@context":"https://schema.org",
+          "@type":"Product",
+          "name": name,
+          "sku": sku,
+          "brand": {"@type":"Brand","name": brand},
+          "category": card.dataset?.kategori || "",
+          "image": new URL(img, location.origin + location.pathname.replace(/[^/]+$/, '')).href,
+          "description": sub,
+          "offers": {"@type":"Offer","priceCurrency":"IDR","price": price,"availability":"https://schema.org/InStock","url": url}
+        };
       });
-      const hint = document.querySelector('.hint');
-      if(hint){ hint.textContent = visible === 0 ? 'Tidak ada hasil. Coba ubah kata kunci atau filter.' : ''; }
-    }
-
-    [q, kategori, kondisi, tahun].forEach(el=> el && el.addEventListener('input', applyFilter));
-    document.addEventListener('DOMContentLoaded', applyFilter);
+      if (products.length) {
+        const script = document.createElement('script');
+        script.type = 'application/ld+json';
+        script.textContent = JSON.stringify(products, null, 2);
+        document.head.appendChild(script);
+      }
+    })();
   </script>
+
   <script src="script.js"></script>
 </body>
 </html>
