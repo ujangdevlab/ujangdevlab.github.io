@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ujangdevlab.github.io/sitemap.xml
